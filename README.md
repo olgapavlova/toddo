@@ -8,3 +8,6 @@ Set of scripts to manage backlog, todo, and other lists inside of small code pro
 export PATH=$PATH:/Users/[ваш логин]/dev/todo/src
 ```
 Чтобы узнать точный адрес каталога, зайдите в src/-подкаталог и запустите команду ```pwd```.
+
+## Обозначения
+[ ] ! — срочно, # — можно, B — backlog, N — потом, Т — технодолг, + — готово
