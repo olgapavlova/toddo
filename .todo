@@ -1,0 +1,7 @@
+./.backlog:6:[B] Поиск TODO по всем текстовым файлам
+./src/todo.sh:3:TODO_FILE=.todo
+./src/todo.sh:4:rm -f $TODO_FILE
+./src/todo.sh:5:grep -RHn TODO --exclude-dir .venv --exclude-dir .git > $TODO_FILE
+./src/todo.sh:6:sed -r 's/([^\:]*):([^\:]*).*TODO(.*)/\1\t[\2] \3/' $TODO_FILE
+./src/todo.sh:7:sed '!d;=' $TODO_FILE | paste -d: - -
+./src/todo.sh:8://more $TODO_FILE
