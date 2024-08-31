@@ -1,7 +1,13 @@
-./.backlog:6:[B] Поиск TODO по всем текстовым файлам
-./src/todo.sh:3:TODO_FILE=.todo
-./src/todo.sh:4:rm -f $TODO_FILE
-./src/todo.sh:5:grep -RHn TODO --exclude-dir .venv --exclude-dir .git > $TODO_FILE
-./src/todo.sh:6:sed -r 's/([^\:]*):([^\:]*).*TODO(.*)/\1\t[\2] \3/' $TODO_FILE
-./src/todo.sh:7:sed '!d;=' $TODO_FILE | paste -d: - -
-./src/todo.sh:8://more $TODO_FILE
+по всем текстовым файлам	[8] ./.backlog
+в README.md между строками-ограничителями	[14] ./.backlog
+./src/todo.sh:2:TODO_FILE=.todo
+./src/todo.sh:8:VIM_PARAM=$(sed -r -n "$1s/.*\[([0-9]*)\].\.\/(.*)/\2 +\1/p" $TODO_FILE)
+./src/todo.sh:16:rm -f $TODO_FILE
+(.*)/\3\t[\2] \1/' > $TODO_FILE	[17] ./src/todo.sh
+./src/todo.sh:18:more -S -N -E $TODO_FILE
+./src/.todo:1:./todo.sh:3:TODO_FILE=.todo
+./src/.todo:2:./todo.sh:4:rm -f $TODO_FILE
+--exclude-dir .venv --exclude-dir .git > $TODO_FILE	[3] ./src/.todo
+./src/.todo:4:./todo.sh:6:sed -r 's/([^\:]*):([^\:]*).*TODO(.*)/\1\t[\2] \3/' $TODO_FILE
+./src/.todo:5:./todo.sh:7:sed '!d;=' $TODO_FILE | paste -d: - -
+./src/.todo:6:./todo.sh:8://more $TODO_FILE

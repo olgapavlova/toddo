@@ -1,6 +1,5 @@
-./todo.sh:3:TODO_FILE=.todo
-./todo.sh:4:rm -f $TODO_FILE
-./todo.sh:5:grep -RHn TODO --exclude-dir .venv --exclude-dir .git > $TODO_FILE
-./todo.sh:6:sed -r 's/([^\:]*):([^\:]*).*TODO(.*)/\1\t[\2] \3/' $TODO_FILE
-./todo.sh:7:sed '!d;=' $TODO_FILE | paste -d: - -
-./todo.sh:8://more $TODO_FILE
+./todo.sh:2:TODO_FILE=.todo
+./todo.sh:8:VIM_PARAM=$(sed -r -n "$1s/.*\[([0-9]*)\].\.\/(.*)/\2 +\1/p" $TODO_FILE)
+./todo.sh:16:rm -f $TODO_FILE
+(.*)/\3\t[\2] \1/' > $TODO_FILE	[17] ./todo.sh
+./todo.sh:18:more -S -N -E $TODO_FILE
