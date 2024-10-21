@@ -5,7 +5,7 @@ Set of scripts to manage backlog, todo, and other lists inside of small code pro
 1. Добавить путь к src/-подкаталогу в переменную оболочки PATH.
    Скорее всего, нужно добавить в файл ~/.bashrc или ~/.zshenv такую команду:
 ```
-export PATH=$PATH:/Users/[ваш логин]/dev/todo/src
+export PATH=$PATH:/Users/[ваш логин]/dev/toddo/src
 ```
 Чтобы узнать точный адрес каталога, зайдите в src/-подкаталог и запустите команду ```pwd```.
 
