@@ -1,5 +1,0 @@
-./todo.sh:2:TODO_FILE=.todo
-./todo.sh:8:VIM_PARAM=$(sed -r -n "$1s/.*\[([0-9]*)\].\.\/(.*)/\2 +\1/p" $TODO_FILE)
-./todo.sh:16:rm -f $TODO_FILE
-(.*)/\3\t[\2] \1/' > $TODO_FILE	[17] ./todo.sh
-./todo.sh:18:more -S -N -E $TODO_FILE
